@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\sci-all-api-gateway.props" />
+</Project>

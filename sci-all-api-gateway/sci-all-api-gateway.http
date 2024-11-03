@@ -1,0 +1,6 @@
+@sci_all_api_gateway_HostAddress = http://localhost:5162
+
+GET {{sci_all_api_gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
