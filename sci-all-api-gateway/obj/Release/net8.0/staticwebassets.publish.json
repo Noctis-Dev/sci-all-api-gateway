@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/uEj34GBcV0hacok92rAKgNeR7RzqMEIhHa74t6eFYE=",
+  "Source": "sci-all-api-gateway",
+  "BasePath": "_content/sci-all-api-gateway",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,12 +1,16 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using sci_all_api_gateway.aggregator;
+using sci_all_api_gateway.handlers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Configuration.AddJsonFile("./Routes/ocelot.auth.json", optional: false, reloadOnChange: true);
-builder.Configuration.AddJsonFile("./Routes/ocelot.payments.json", optional: false, reloadOnChange: true);
-builder.Services.AddOcelot(builder.Configuration);
+var env = builder.Environment;
+builder.Configuration.AddOcelot("./Routes/", env);
+builder.Services.AddOcelot(builder.Configuration)
+    .AddDelegatingHandler<RemoveEncodingDelegatingHandler>(true)
+    .AddSingletonDefinedAggregator<StreamPublicationAggregator>();
 
 var app = builder.Build();
 

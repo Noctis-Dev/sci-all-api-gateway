@@ -1,7 +1,5 @@
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\appsettings.json
-C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.auth.json
-C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.payments.json
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\sci-all-api-gateway.exe
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\sci-all-api-gateway.deps.json
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\sci-all-api-gateway.runtimeconfig.json
@@ -43,3 +41,11 @@ C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\obj\Debug\n
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\obj\Debug\net8.0\sci-all-api-gateway.pdb
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\obj\Debug\net8.0\sci-all-api-gateway.genruntimeconfig.cache
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\obj\Debug\net8.0\ref\sci-all-api-gateway.dll
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\obj\Debug\net8.0\sci-all-api-gateway.sourcelink.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.auth.v1.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.payments.v1.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.resources.v1.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.aggregated.routes.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.social.v1.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\sci-all-api-gateway\bin\Debug\net8.0\Routes\ocelot.streams.v1.json
