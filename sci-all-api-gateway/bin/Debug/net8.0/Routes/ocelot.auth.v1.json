@@ -5,7 +5,7 @@
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "44.203.156.129",
+          "Host": "localhost",
           "Port": 8081
         }
       ],
@@ -24,7 +24,7 @@
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "44.203.156.129",
+          "Host": "localhost",
           "Port": 8081
         }
       ],
@@ -43,7 +43,7 @@
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "44.203.156.129",
+          "Host": "localhost",
           "Port": 8081
         }
       ],
@@ -58,15 +58,34 @@
       }
     },
     {
-      "UpstreamPathTemplate": "/api/v1/auth/verify/credential/{uuid}",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamPathTemplate": "/api/v1/auth/verify/credential/{uuid}?{query}",
+      "UpstreamHttpMethod": [ "GET" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "44.203.156.129",
+          "Host": "localhost",
           "Port": 8081
         }
       ],
-      "DownstreamPathTemplate": "/api/v1/credential/{uuid}?{query}",
+      "DownstreamPathTemplate": "/api/v1/verify/credential/{uuid}?{query}",
+      "DownstreamScheme": "http",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 10,
+        "Limit": 10
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/auth/user/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/user/login",
       "DownstreamScheme": "http",
       "RateLimitOptions": {
         "ClientWhitelist": [],
@@ -76,8 +95,5 @@
         "Limit": 10
       }
     }
-  ],
-  "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000/"
-  }
+  ]
 }

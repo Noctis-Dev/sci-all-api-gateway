@@ -10,7 +10,8 @@ var env = builder.Environment;
 builder.Configuration.AddOcelot("./Routes/", env);
 builder.Services.AddOcelot(builder.Configuration)
     .AddDelegatingHandler<RemoveEncodingDelegatingHandler>(true)
-    .AddSingletonDefinedAggregator<StreamPublicationAggregator>();
+    .AddSingletonDefinedAggregator<StreamPublicationAggregator>()
+    .AddSingletonDefinedAggregator<PublicationAggregator>();
 
 var app = builder.Build();
 

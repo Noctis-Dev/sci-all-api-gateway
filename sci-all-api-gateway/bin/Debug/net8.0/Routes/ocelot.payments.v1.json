@@ -1,11 +1,30 @@
 {
   "Routes": [
     {
-      "UpstreamPathTemplate": "/payments/profile",
+      "UpstreamPathTemplate": "/api/v1/payments/donation",
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "100.27.5.165",
+          "Host": "localhost",
+          "Port": 8083
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/donations",
+      "DownstreamScheme": "http",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 10,
+        "Limit": 10
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/payments/profile",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
           "Port": 8083
         }
       ],
@@ -20,11 +39,11 @@
       }
     },
     {
-      "UpstreamPathTemplate": "/payments/oauth",
+      "UpstreamPathTemplate": "/api/v1/payments/oauth?{query}",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "100.27.5.165",
+          "Host": "localhost",
           "Port": 8083
         }
       ],

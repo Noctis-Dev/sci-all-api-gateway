@@ -16,22 +16,26 @@ public class StreamPublicationAggregator : IDefinedAggregator
         var streams = JsonConvert.DeserializeObject<List<Streams>>(streamsResponse);
         var publication = JsonConvert.DeserializeObject<List<Publication>>(publicationResponse);
         
+        var streamsDict = streams?.ToDictionary(s => s.uuid!);
         var result = new List<StreamPublicationResponse>();
-        for (int i = 0; i < streams?.Count && i < publication?.Count; i++)
+
+        foreach (var pub in publication!)
         {
-            var streamPublication = new StreamPublicationResponse()
+            if (streamsDict!.TryGetValue(pub.secondary_item_uuid!, out var stream))
             {
-                stream_uuid = streams[i].uuid,
-                publication_uuid = publication[i].publication_uuid,
-                user_uuid = streams[i].user_uuid,
-                access_token = streams[i].access_token,
-                created_at = streams[i].created_at,
-                finalized_at = streams[i].finalized_at,
-                body = publication[i].body,
-                type = publication[i].type
-            };
-            
-            result.Add(streamPublication);
+                var streamPublication = new StreamPublicationResponse()
+                {
+                    stream_uuid = stream.uuid,
+                    publication_uuid = pub.publication_uuid,
+                    user_uuid = stream.user_uuid,
+                    access_token = stream.access_token,
+                    created_at = stream.created_at,
+                    finalized_at = stream.finalized_at,
+                    body = pub.body,
+                    type = pub.type
+                };
+                result.Add(streamPublication);
+            }
         }
         
         var resultJson = JsonConvert.SerializeObject(result);
@@ -40,6 +44,12 @@ public class StreamPublicationAggregator : IDefinedAggregator
             Headers = { ContentType = new MediaTypeHeaderValue("application/json") }
         };
         
-        return new DownstreamResponse(stringContent, System.Net.HttpStatusCode.OK, new List<KeyValuePair<string, IEnumerable<string>>>(), "OK");
+        return new DownstreamResponse(
+            stringContent, 
+            System.Net.HttpStatusCode.OK, 
+            new List<KeyValuePair<string, 
+                IEnumerable<string>>>(), 
+            "OK"
+        );
     }
 }

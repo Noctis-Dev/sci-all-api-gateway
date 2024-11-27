@@ -1,8 +1,13 @@
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\sci-all-api-gateway.exe
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\appsettings.Development.json
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\appsettings.json
-C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.auth.json
-C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.payments.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.aggregated.routes.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.auth.v1.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.payments.v1.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.resources.v1.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.social.v1.json
+C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\Routes\ocelot.streams.v1.json
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\sci-all-api-gateway.dll
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\sci-all-api-gateway.deps.json
 C:\Users\Jorge\RiderProjects\sci-all-api-gateway\bin\Release\net8.0\publish\sci-all-api-gateway.runtimeconfig.json

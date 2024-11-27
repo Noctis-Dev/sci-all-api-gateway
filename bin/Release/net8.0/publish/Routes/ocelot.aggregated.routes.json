@@ -1,0 +1,12 @@
+{
+  "Aggregates": [
+    {
+      "UpstreamPathTemplate": "/api/v1/stream/publications",
+      "RouteKeys": [
+        "streams",
+        "publications"
+      ],
+        "Aggregator": "StreamPublicationAggregator"
+    }
+  ]
+}

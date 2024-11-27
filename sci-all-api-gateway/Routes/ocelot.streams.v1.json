@@ -6,7 +6,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 8000
+          "Port": 8087
         }
       ],
       "DownstreamPathTemplate": "/api/v1/stream",

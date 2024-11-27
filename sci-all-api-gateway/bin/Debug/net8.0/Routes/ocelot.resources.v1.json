@@ -5,11 +5,31 @@
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "18.208.227.23",
+          "Host": "localhost",
           "Port": 3000
         }
       ],
       "DownstreamPathTemplate": "/api/resources/aviso-privacidad",
+      "DownstreamScheme": "http",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 10,
+        "Limit": 10
+      }
+    },
+    {
+      "key": "resources",
+      "UpstreamPathTemplate": "/api/v1/resources/",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/resources/PDF",
       "DownstreamScheme": "http",
       "RateLimitOptions": {
         "ClientWhitelist": [],

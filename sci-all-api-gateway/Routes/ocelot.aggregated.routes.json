@@ -4,9 +4,17 @@
       "UpstreamPathTemplate": "/api/v1/stream/publications",
       "RouteKeys": [
         "streams",
-        "publications"
+        "stream_publications"
       ],
         "Aggregator": "StreamPublicationAggregator"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/publications",
+      "RouteKeys": [
+        "resources",
+        "publications"
+      ],
+      "Aggregator": "PublicationAggregator"
     }
   ]
 }

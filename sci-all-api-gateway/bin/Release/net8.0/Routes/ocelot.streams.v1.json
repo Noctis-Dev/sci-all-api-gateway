@@ -1,15 +1,15 @@
 {
   "Routes": [
     {
-      "UpstreamPathTemplate": "/api/v1/resources/aviso-privacidad",
+      "UpstreamPathTemplate": "/api/v1/streaming/streams",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 3000
+          "Port": 8000
         }
       ],
-      "DownstreamPathTemplate": "/api/resources/aviso-privacidad",
+      "DownstreamPathTemplate": "/api/v1/stream",
       "DownstreamScheme": "http",
       "RateLimitOptions": {
         "ClientWhitelist": [],
@@ -17,7 +17,8 @@
         "Period": "10s",
         "PeriodTimespan": 10,
         "Limit": 10
-      }
+      },
+      "Key": "streams"
     }
   ]
 }

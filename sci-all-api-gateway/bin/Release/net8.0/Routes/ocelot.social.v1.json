@@ -1,53 +1,56 @@
 {
   "Routes": [
     {
-      "UpstreamPathTemplate": "/api/v1/payments/donation",
-      "UpstreamHttpMethod": [ "POST" ],
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8083
-        }
-      ],
-      "DownstreamPathTemplate": "/api/v1/donations",
-      "DownstreamScheme": "http",
-      "RateLimitOptions": {
-        "ClientWhitelist": [],
-        "EnableRateLimiting": true,
-        "Period": "10s",
-        "PeriodTimespan": 10,
-        "Limit": 10
-      }
-    },
-    {
-      "UpstreamPathTemplate": "/api/v1/payments/profile",
-      "UpstreamHttpMethod": [ "POST" ],
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8083
-        }
-      ],
-      "DownstreamPathTemplate": "/api/v1/profile",
-      "DownstreamScheme": "http",
-      "RateLimitOptions": {
-        "ClientWhitelist": [],
-        "EnableRateLimiting": true,
-        "Period": "10s",
-        "PeriodTimespan": 10,
-        "Limit": 10
-      }
-    },
-    {
-      "UpstreamPathTemplate": "/api/v1/payments/oauth?{query}",
+      "Key": "publications",
+      "UpstreamPathTemplate": "/api/v1/social/publications",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 8083
+          "Port": 8084
         }
       ],
-      "DownstreamPathTemplate": "/api/v1/oauth?{query}",
+      "DownstreamPathTemplate": "/api/v1/publications",
+      "DownstreamScheme": "http",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 10,
+        "Limit": 10
+      }
+    },
+    {
+      "Key": "get_comments",
+      "UpstreamPathTemplate": "/api/v1/social/comments/{publication_id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8084
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/comments/{publication_id}",
+      "DownstreamScheme": "http",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 10,
+        "Limit": 10
+      }
+    },
+    {
+      "Key": "get_metadata",
+      "UpstreamPathTemplate": "/api/v1/social/metadata/{publication_id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8084
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/metadata/{publication_id}",
       "DownstreamScheme": "http",
       "RateLimitOptions": {
         "ClientWhitelist": [],
